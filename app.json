@@ -1,0 +1,67 @@
+{
+  "expo": {
+    "name": "WCA",
+    "slug": "wca",
+    "scheme": "wcahsv",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "bundleIdentifier": "org.wcahsv.app",
+      "supportsTablet": true,
+      "config": {
+        "usesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "org.wcahsv.app",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "permissions": [
+        "android.permission.ACCESS_NOTIFICATION_POLICY"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      "expo-video",
+      "expo-notifications",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "WCA uses your location when you announce car line pickup and, if you turn on automatic check-in, to notice when you arrive at school. Your location isn't stored or shared.",
+          "locationAlwaysPermission": "WCA uses your location when you announce car line pickup and, if you turn on automatic check-in, to notice when you arrive at school. Your location isn't stored or shared.",
+          "locationWhenInUsePermission": "WCA uses your location when you tap I'm here at car line pickup, so the school knows you've arrived. Your location isn't stored or shared.",
+          "isAndroidBackgroundLocationEnabled": true,
+          "isIosBackgroundLocationEnabled": true
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "WCA lets you add a photo of an item you're selling in the Marketplace.",
+          "cameraPermission": "WCA lets you take a photo of an item you're selling in the Marketplace.",
+          "microphonePermission": false
+        }
+      ],
+      "./plugins/withSceneLifecycle",
+      "./plugins/withCarPlay",
+      "./plugins/withGradleMemory"
+    ],
+    "experiments": {
+      "typedRoutes": false,
+      "baseUrl": "/wca"
+    },
+    "icon": "./assets/icon.png",
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "output": "single"
+    },
+    "extra": {
+      "supabaseUrl": "",
+      "supabaseKey": ""
+    }
+  }
+}
