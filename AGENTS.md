@@ -215,7 +215,7 @@ strict. Backend is Supabase (Postgres + Auth + Realtime + Edge Functions).
   `screenLayout={edgeLayout(…)}` and the tab bar draws its part (`tabBarBackground`), so
   new screens get it for free. A screen with a dark background goes in the root
   layout's `skip` list (like `video`).
-- The web build is served under `/khroyals` (`expo.experiments.baseUrl`); use
+- The web build is served under `/wca` (`expo.experiments.baseUrl`); use
   expo-router links, not hard-coded absolute paths.
 - **CarPlay** (`modules/carplay`, `src/carplay`, `plugins/withCarPlay.js`): iPhone
   builds get the `com.apple.developer.carplay-driving-task` entitlement only with
